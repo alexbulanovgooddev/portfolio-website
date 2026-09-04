@@ -1,0 +1,94 @@
+/* scaffolding */
+
+@use '~/assets/scss/general/variables' as *;
+@use '~/assets/scss/abstracts/mixins' as *;
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+	overscroll-behavior: none;
+}
+
+body {
+	@include font-base;
+	@include typo-paragraph-2;
+	@include cursor-default;
+
+	display: flex;
+	flex-direction: column;
+	padding: 8px 8px 0;
+	color: var(--color-ink);
+	background-color: var(--color-canvas);
+
+	@media screen and (min-width: $md) {
+		padding: 16px 16px 0;
+	}
+
+	@media screen and (min-width: $lg) {
+		padding: 92px 24px 0;
+	}
+}
+
+/* stylelint-disable */
+body > #__nuxt {
+	height: 100%;
+}
+
+body > #__nuxt > div,
+body > #__nuxt > div > div {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+/* stylelint-enable */
+
+.visually-hidden {
+	position: absolute;
+	overflow: hidden;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	border: 0;
+	margin: -1px;
+	clip-path: rect(0 0 0 0);
+	white-space: nowrap;
+}
+
+.container {
+	margin: 0 auto;
+	width: 100%;
+	padding: 0 16px;
+
+	@media screen and (min-width: $sm) {
+		padding: 0 32px;
+	}
+
+	@media screen and (min-width: $lg) {
+		max-width: $lg;
+		padding: 0 64px;
+	}
+
+	@media screen and (min-width: $xl) {
+		max-width: $xl;
+		padding: 0 80px;
+	}
+
+	@media screen and (min-width: $xxl) {
+		max-width: $xxl;
+		padding: 0 96px;
+	}
+}

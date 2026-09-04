@@ -1,0 +1,40 @@
+/* main.css */
+
+:root {
+	/* Статусы */
+	--color-success: #29ae29;
+	--color-warning: #ffc62a;
+	--color-error: #ef4444;
+
+	/* Поверхности */
+	--color-canvas: #000;
+	--color-surface: #fff;
+	--color-chrome: #c4c4c4;
+
+	/* Передний план */
+	--color-ink: #000;
+	--color-ink-muted: #00000090;
+
+	/* Производные — переопределяются */
+	--color-border: var(--color-ink);
+	--color-shadow: var(--color-canvas);
+	--color-pattern: var(--color-chrome);
+}
+
+:root.dark {
+	color-scheme: dark;
+
+	/* Поверхности */
+	--color-canvas: #0d0f12;
+	--color-surface: #191c21;
+	--color-chrome: #2b3038;
+
+	/* Передний план */
+	--color-ink: #e6e9ee;
+	--color-ink-muted: #e6e9ee90;
+
+	/* Статусы */
+	--color-success: #4ade80;
+	--color-warning: #fbbf24;
+	--color-error: #f87171;
+}

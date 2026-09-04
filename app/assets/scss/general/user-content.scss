@@ -1,0 +1,109 @@
+/* user-content */
+
+@use '~/assets/scss/general/variables' as *;
+@use '~/assets/scss/abstracts/mixins' as *;
+
+h1 {
+	@include typo-display-2;
+
+	margin: 0;
+	text-wrap: pretty;
+
+	&:not(:first-child) {
+		margin-top: 36px;
+	}
+
+	&:not(:last-child) {
+		margin-bottom: 36px;
+	}
+}
+
+h2 {
+	@include typo-display-3;
+
+	margin: 0;
+	text-wrap: pretty;
+
+	&:not(:first-child) {
+		margin-top: 16px;
+	}
+
+	&:not(:last-child) {
+		margin-bottom: 16px;
+	}
+}
+
+h3 {
+	@include typo-display-3;
+
+	margin: 0;
+	text-wrap: pretty;
+
+	&:not(:first-child) {
+		margin-top: 24px;
+	}
+
+	&:not(:last-child) {
+		margin-bottom: 24px;
+	}
+}
+
+p {
+	@include typo-paragraph-2;
+
+	margin: 0;
+
+	&:not(:first-child) {
+		margin-top: 20px;
+	}
+
+	&:not(:last-child) {
+		margin-bottom: 20px;
+	}
+}
+
+a {
+	@include cursor-pointer;
+
+	color: inherit;
+	text-decoration: underline;
+	font-weight: 800;
+	text-underline-offset: 4px;
+}
+
+a:disabled {
+	@include cursor-default;
+}
+
+img {
+	display: flex;
+	width: 100%;
+	height: auto;
+
+	&:not(:first-child) {
+		margin-top: 36px;
+	}
+
+	&:not(:last-child) {
+		margin-bottom: 36px;
+	}
+}
+
+ul,
+ol {
+	@include typo-paragraph-3;
+
+	display: grid;
+	row-gap: 6px;
+	padding-left: 32px;
+}
+
+ul:not(:first-child),
+ol:not(:first-child) {
+	margin-top: 20px;
+}
+
+ul:not(:last-child),
+ol:not(:last-child) {
+	margin-bottom: 20px;
+}
