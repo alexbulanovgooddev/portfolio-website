@@ -46,12 +46,10 @@ const { renderBlock } = useDatoRender()
 					</template>
 
 					<template #default>
-						<div class="container">
-							<DatocmsStructuredText
-								:data="data.projectPost.text"
-								:render-block="renderBlock"
-							/>
-						</div>
+						<DatocmsStructuredText
+							:data="data.projectPost.text"
+							:render-block="renderBlock"
+						/>
 					</template>
 				</WindowPanel>
 			</div>
